@@ -5,6 +5,10 @@ Easier than putting the codes up on slack and then sending them out again if mak
 
 .
 
+Goal is to create a bunch of models in caret, optimize them, and then combine them by weighting each model.
+
+.
+
 Log transformation of the loss column
 - https://www.kaggle.com/c/allstate-claims-severity/forums/t/25323/shift-happens-understanding-the-log-loss-shift-transformation
 
