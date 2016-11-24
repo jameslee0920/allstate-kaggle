@@ -66,5 +66,5 @@ new.all.cd.train$loss = log(all.train$loss +200)
 
 new.all.cd.test = read.csv("new_all_cd_test.csv")
 new.all.cd.train = read.csv("new_all_cd_train.csv")
-new.all.cd.train$X = NULL
-new.all.cd.test$X = NULL
+new.all.cd.train$X = NULL #in case you finished the preprocessing and want to start from the read.csv after writing it into a csv for quick future use
+new.all.cd.test$X = NULL #in case you finished the preprocessing and want to start from the read.csv after writing it into a csv for quick future use
