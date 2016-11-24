@@ -1,0 +1,28 @@
+# currently under construction
+
+#################################################
+
+#(changing optimizer, from jason sippie on slack)
+#How to change the optimizer in caret. 
+#It defaults to trying to minimize RMSE. 
+#You can change that to MAE (which is what kaggle wants) with the below code.
+
+x_mae <-function (data, lev = NULL, model = NULL,...) 
+{ 
+  require(Metrics)
+  m <- try(Metrics::mae(exp(data$obs), exp(data$pred)),silent=TRUE)
+  out<-c(m)
+  names(out) <- c("MAE")
+  out 
+}
+
+xgb_trcontrol <- trainControl(
+# <your other params>,
+	summaryFunction = x_mae
+)
+
+xgb_train_1 <- train(
+ # <your other params>,
+	metric= "MAE"
+
+)
