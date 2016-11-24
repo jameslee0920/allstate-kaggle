@@ -5,7 +5,7 @@ Easier than putting the codes up on slack and then sending them out again if mak
 
 .
 
-Goal is to create a bunch of models in caret, optimize them, and then combine them by weighting each model.
+Goal is to create a bunch of models in caret, optimize them, and then combine them by weighting each model. Feel free to add anything here.
 
 .
 
