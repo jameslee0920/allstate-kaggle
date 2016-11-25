@@ -1,8 +1,6 @@
-# currently under construction
+#(changing optimizer, from jason sippie on slack)
 
 #################################################
-
-#(changing optimizer, from jason sippie on slack)
 #How to change the optimizer in caret. 
 #It defaults to trying to minimize RMSE. 
 #You can change that to MAE (which is what kaggle wants) with the below code.
