@@ -63,7 +63,21 @@ RMSE(pred = predicted1, obs = testing$loss1)
 RMSE(pred = predicted2, obs = testing$loss1)
 RMSE(pred = predicted3, obs = testing$loss1)
 
-# in general the RMSE does not go below 0.5056 
+# in general the RMSE does not go below 0.5053
+
+mae <- function(error)
+{
+  mean(abs(error))
+}
+
+error.3 <- predicted3 - testing1$loss1
+mae(error.3) # 0.397099
+
+error.2 <- predicted2 - testing1$loss1
+mae(error.2) # 0.3969672
+
+error.1 <- predicted1 - testing1$loss1
+mae(error.1) # 0.3969672
 
 
 
