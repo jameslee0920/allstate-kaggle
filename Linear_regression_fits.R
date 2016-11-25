@@ -19,11 +19,11 @@ dim(testing)
 
 # To get rid of this problem I fitted model 3 in which I eliminated both the variables omitted by R
 # and those that were not significant at least at the 90% confidence level
-lmFit1<-train(loss1~., data=justloss1, method='lm')
+lmFit1<-train(loss1~., data=training, method='lm')
 summary(lmFit1)
 
 lmFit1adj2 <- train(loss1~. - cat114.OTHER -cat111.OTHER -cat103.OTHER -cat101.OTHER
-                    -cat102.OTHER -cat90.OTHER -cat89.OTHER, data=justloss1, method='lm')
+                    -cat102.OTHER -cat90.OTHER -cat89.OTHER, data=training, method='lm')
 summary(lmFit1adj2)
 
 lmFit1adj3 <- train(loss1~. - cat114.OTHER -cat111.OTHER -cat103.OTHER -cat101.OTHER
@@ -39,7 +39,7 @@ lmFit1adj3 <- train(loss1~. - cat114.OTHER -cat111.OTHER -cat103.OTHER -cat101.O
                     -cat109.OTHER -cat110.CL -cat110.CO -cat110.EG -cat110.OTHER -cat113.AX
                     -cat113.OTHER -cat115.K -cat115.L -cat115.L -cat115.M -cat115.N -cat115.N
                     -cat115.O -cat115.OTHER -cat115.P -cont3 -cont5 -cont6 -cont13, 
-                    data=justloss1, method='lm')
+                    data=training, method='lm')
 summary(lmFit1adj3)
 
 lmImp1 <- varImp(lmFit1, scale = FALSE)
