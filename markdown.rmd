@@ -4,6 +4,30 @@ author: "Team 1"
 output: html_document
 ---
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sections:
+
+- Exploring the data
+- Preprocessing
+
+- Supervised ML methods:
+  - Linear model
+  - Lasso, Ridge
+  - Random Forest
+  - GBM
+  - Ensembling
+  
+- Non-supervised ML methods:
+  - Clustering
+  - PCA
+  
+-Sensitivity
+-Specificity
+-Receiver Operating Characteristic Curve
+-Area Under the Curve Metric
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 # libraries
@@ -20,7 +44,7 @@ new.all.cd.train = read.csv("new_all_cd_train.csv")
 
 ## Exploring the data
 
-### Basic data analysis.
+### Basic data analysis
 
 ```{r, echo = F, warning = F, message = F, cache=F}
 
@@ -142,7 +166,7 @@ ggplot(data = allstate_train, mapping = aes(allstate_train$loss)) +
   ylim(0, 2)
 ```
 
-The log(x+200) is apparently better (how???) (credit to kaggle forums)
+The log(x+200) is apparently better(???) (credit to kaggle forums)
 
 ```{r, echo = F, warning = F, message = F}
 skew3 <- skewness(log(allstate_train$loss+200))
