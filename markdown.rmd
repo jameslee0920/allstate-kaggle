@@ -142,7 +142,7 @@ ggplot(data = allstate_train, mapping = aes(allstate_train$loss)) +
   ylim(0, 2)
 ```
 
-The log(x+200) is better(???) (credit to kaggle forums)
+The log(x+200) is apparently better (how???) (credit to kaggle forums)
 
 ```{r, echo = F, warning = F, message = F}
 skew3 <- skewness(log(allstate_train$loss+200))
